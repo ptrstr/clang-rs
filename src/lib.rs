@@ -809,7 +809,7 @@ pub enum EntityKind {
 impl EntityKind {
     fn from_raw(raw: c_int) -> Option<Self> {
         match raw {
-            1..=50 | 70..=73 | 100..=149 | 200..=280 | 300 | 400..=441 | 500..=503 | 600..=603
+            1..=50 | 70..=73 | 100..=149 | 200..=280 | 300 | 350 | 400..=441 | 500..=503 | 600..=603
             | 700 => {
                 Some(unsafe { mem::transmute(raw) })
             }
